@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     private float playerScore;
     Renderer render;
+    public float raycastSize = 0.5f;
 
 
     void Awake()
@@ -25,11 +29,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+    }
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            TryJump();
-        }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(new Vector3( raycastSize, 0, raycastSize),(new Vector3( raycastSize, 0, raycastSize)));
+        Gizmos.DrawLine(new Vector3( -raycastSize, 0, raycastSize),(new Vector3( -raycastSize, 0, raycastSize)));
+        Gizmos.DrawLine(new Vector3( raycastSize, 0, -raycastSize),(new Vector3( raycastSize, 0, -raycastSize)));
+        Gizmos.DrawLine(new Vector3( -raycastSize, 0, -raycastSize),(new Vector3( -raycastSize, 0, -raycastSize)));
+
     }
 
     void Move()
@@ -42,21 +51,22 @@ public class PlayerController : MonoBehaviour
         dir.y = rig.velocity.y;
 
         rig.velocity = dir;
-
-        Vector3 facingDir = new Vector3(xInput, 0, zInput);
-
-        if (facingDir.magnitude > 0)
+       
+        if (Input.GetButtonDown("Jump"))
         {
-            transform.forward = facingDir;
+            TryJump();
         }
+        
     }
-
+    
     void TryJump()
     {
-        Ray ray1 = new Ray(transform.position + new Vector3(0.5f, 0, 0.5f), Vector3.down);
-        Ray ray2 = new Ray(transform.position + new Vector3(-0.5f, 0, 0.5f), Vector3.down);
-        Ray ray3 = new Ray(transform.position + new Vector3(0.5f, 0, -0.5f), Vector3.down);
-        Ray ray4 = new Ray(transform.position + new Vector3(-0.5f, 0, -0.5f), Vector3.down);
+        Ray ray1 = new Ray(transform.position + new Vector3(raycastSize, 0, raycastSize), Vector3.down);
+        Ray ray2 = new Ray(transform.position + new Vector3(-raycastSize, 0, raycastSize), Vector3.down);
+        Ray ray3 = new Ray(transform.position + new Vector3(raycastSize, 0, -raycastSize), Vector3.down);
+        Ray ray4 = new Ray(transform.position + new Vector3(-raycastSize, 0, -raycastSize), Vector3.down);
+        
+        //Gizmos.DrawLine(ray1, Vector3.down);
 
         bool cast1 = Physics.Raycast(ray1, 0.7f);
         bool cast2 = Physics.Raycast(ray2, 0.7f);
