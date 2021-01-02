@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
@@ -18,30 +19,56 @@ public class PlayerController : MonoBehaviour
     Renderer render;
     public float raycastSize = 0.5f;
 
+    public GameManager gameManager;
 
     void Awake()
     {
-        // get the rigisbody component
+        // get the rigidbody component
         rig = GetComponent<Rigidbody>();
         render = GetComponent<Renderer>();
     }
 
     void Update()
     {
-        Move();
+       NoMixMove(); //Uncomment/comment when Movement needs to not be mixed around - useful for testing features.
+                    //Currently works well 02/01/21
+                    
+      // MixedMove(); //Uncomment/comment when Movement needs to be shuffled - this is how the controls should be for the game
+                    //Currently does not work 02/01/21
     }
 
-    private void OnDrawGizmosSelected()
+    void MixedMove()
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(new Vector3( raycastSize, 0, raycastSize),(new Vector3( raycastSize, 0, raycastSize)));
-        Gizmos.DrawLine(new Vector3( -raycastSize, 0, raycastSize),(new Vector3( -raycastSize, 0, raycastSize)));
-        Gizmos.DrawLine(new Vector3( raycastSize, 0, -raycastSize),(new Vector3( raycastSize, 0, -raycastSize)));
-        Gizmos.DrawLine(new Vector3( -raycastSize, 0, -raycastSize),(new Vector3( -raycastSize, 0, -raycastSize)));
-
+        if (Input.GetKey("a"))
+        {
+            Vector3 dir = new Vector3(-1, 0, 0) * moveSpeed;
+            dir.y = rig.velocity.y;
+            rig.velocity = dir;
+        }
+        
+        if (Input.GetKey("w"))
+        {
+            Vector3 dir = new Vector3(0, 0, 1) * moveSpeed;
+            dir.y = rig.velocity.y;
+            rig.velocity = dir;
+        }
+        
+        if (Input.GetKey("s"))
+        {
+            Vector3 dir = new Vector3(0, 0, -1) * moveSpeed;
+            dir.y = rig.velocity.y;
+            rig.velocity = dir;
+        }
+        
+        if (Input.GetKey("d"))
+        {
+            Vector3 dir = new Vector3(1, 0, 0) * moveSpeed;
+            dir.y = rig.velocity.y;
+            rig.velocity = dir;
+        }
     }
-
-    void Move()
+    
+    void NoMixMove()
     {
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
@@ -51,45 +78,20 @@ public class PlayerController : MonoBehaviour
         dir.y = rig.velocity.y;
 
         rig.velocity = dir;
-       
-        if (Input.GetButtonDown("Jump"))
-        {
-            TryJump();
-        }
-        
-    }
-    
-    void TryJump()
-    {
-        Ray ray1 = new Ray(transform.position + new Vector3(raycastSize, 0, raycastSize), Vector3.down);
-        Ray ray2 = new Ray(transform.position + new Vector3(-raycastSize, 0, raycastSize), Vector3.down);
-        Ray ray3 = new Ray(transform.position + new Vector3(raycastSize, 0, -raycastSize), Vector3.down);
-        Ray ray4 = new Ray(transform.position + new Vector3(-raycastSize, 0, -raycastSize), Vector3.down);
-        
-        //Gizmos.DrawLine(ray1, Vector3.down);
-
-        bool cast1 = Physics.Raycast(ray1, 0.7f);
-        bool cast2 = Physics.Raycast(ray2, 0.7f);
-        bool cast3 = Physics.Raycast(ray3, 0.7f);
-        bool cast4 = Physics.Raycast(ray4, 0.7f);
-
-        if (cast1 || cast2 || cast3 || cast4)
-        {
-            rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
     }
 
-    public void OnTriggerEnter(Collider other)
+
+    /*public void OnTriggerEnter(Collider other)
 
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Coin"))
         {
-            GameManager.instance.GameOver();
-            render.material.color = Color.black;
+            gameManager.coinsCollected++;
+            Destroy(gameObject);
         }
         else if (other.CompareTag("Goal"))
         {
             GameManager.instance.LevelEnd();
         }
-    }
+    }*/
 }

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int score;
-
+    public int coinsCollected = 0;
+    
 
     // instance
     public static GameManager instance;
@@ -24,11 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddScore(int scoreToGive)
-    {
-        
-    }
-
+    
     public void LevelEnd()
     {
         if (SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1)
