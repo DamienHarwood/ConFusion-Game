@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,11 +20,13 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
-    public string keyA = "KeyCode.A";
+    public float movementMixNumber;
+
     void Awake()
     {
         // get the rigidbody component
         rb = GetComponent<Rigidbody>();
+        movementMixNumber = Random.Range(1, 6);
     }
 
     void Update()
@@ -33,61 +36,98 @@ public class PlayerController : MonoBehaviour
 
         MixedMove(); //Uncomment/comment when Movement needs to be shuffled - this is how the controls should be for the game
         //Currently does not work 02/01/21
-    }
+        
 
-    void MixedMove()
-    {
-        /*
-         * 
-         *-x = left
-         * x = right
-         *-z = down
-         * z = up
-         * 
-         */
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left);
-        if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right);
-        if (Input.GetKey(KeyCode.W))
-            rb.AddForce(Vector3.forward);
-        if (Input.GetKey(KeyCode.S))
-            rb.AddForce(Vector3.back);
-
-
-       // if (Input.GetKey("d")) //right
+        void MixedMove()
         {
-          //  Vector3 dir = new Vector3(1, 0, 0) * moveSpeed;
-           // dir.y = rb.velocity.y;
-          //  rb.velocity = dir;
+
+            Rigidbody rb = GetComponent<Rigidbody>();
+            switch (movementMixNumber)
+            {
+                case 1: // Not Mixed
+
+                    if (Input.GetKey(KeyCode.A)) //Left
+                        rb.AddForce(Vector3.left);
+                    if (Input.GetKey(KeyCode.D)) //Right
+                        rb.AddForce(Vector3.right);
+                    if (Input.GetKey(KeyCode.W)) //Up
+                        rb.AddForce(Vector3.forward);
+                    if (Input.GetKey(KeyCode.S)) //Down
+                        rb.AddForce(Vector3.back);
+                    break;
+                case 2: // Reversed
+                    //Rigidbody rb = GetComponent<Rigidbody>();
+                    if (Input.GetKey(KeyCode.D)) //Left
+                        rb.AddForce(Vector3.left);
+                    if (Input.GetKey(KeyCode.A)) //Right
+                        rb.AddForce(Vector3.right);
+                    if (Input.GetKey(KeyCode.S)) //Up
+                        rb.AddForce(Vector3.forward);
+                    if (Input.GetKey(KeyCode.W)) //Down
+                        rb.AddForce(Vector3.back);
+                    break;
+                case 3:
+                    //Rigidbody rb = GetComponent<Rigidbody>();
+                    if (Input.GetKey(KeyCode.S)) //Left
+                        rb.AddForce(Vector3.left);
+                    if (Input.GetKey(KeyCode.D)) //Right
+                        rb.AddForce(Vector3.right);
+                    if (Input.GetKey(KeyCode.W)) //Up
+                        rb.AddForce(Vector3.forward);
+                    if (Input.GetKey(KeyCode.A)) //Down
+                        rb.AddForce(Vector3.back);
+                    break;
+                case 4:
+                    if (Input.GetKey(KeyCode.A)) //Left
+                        rb.AddForce(Vector3.left);
+                    if (Input.GetKey(KeyCode.W)) //Right
+                        rb.AddForce(Vector3.right);
+                    if (Input.GetKey(KeyCode.S)) //Up
+                        rb.AddForce(Vector3.forward);
+                    if (Input.GetKey(KeyCode.D)) //Down
+                        rb.AddForce(Vector3.back);
+                    break;
+                case 5:
+                    if (Input.GetKey(KeyCode.W)) //Left
+                        rb.AddForce(Vector3.left);
+                    if (Input.GetKey(KeyCode.A)) //Right
+                        rb.AddForce(Vector3.right);
+                    if (Input.GetKey(KeyCode.D)) //Up
+                        rb.AddForce(Vector3.forward);
+                    if (Input.GetKey(KeyCode.S)) //Down
+                        rb.AddForce(Vector3.back);
+                    break;
+                default:
+                    Debug.Log("There is a problem with the control selection");
+                    break;
+            }
         }
-    }
 
-    void NoMixMove()
-    {
-        float xInput = Input.GetAxis("Horizontal");
-        float zInput = Input.GetAxis("Vertical");
-
-
-        Vector3 dir = new Vector3(xInput, 0, zInput) * moveSpeed;
-        dir.y = rb.velocity.y;
-
-        rb.velocity = dir;
-    }
-
-
-    /*public void OnTriggerEnter(Collider other)
-
-    {
-        if (other.CompareTag("Coin"))
+        void NoMixMove()
         {
-            gameManager.coinsCollected++;
-            Destroy(gameObject);
+            float xInput = Input.GetAxis("Horizontal");
+            float zInput = Input.GetAxis("Vertical");
+
+
+            Vector3 dir = new Vector3(xInput, 0, zInput) * moveSpeed;
+            dir.y = rb.velocity.y;
+
+            rb.velocity = dir;
         }
-        else if (other.CompareTag("Goal"))
+
+
+        /*public void OnTriggerEnter(Collider other)
+    
         {
-            GameManager.instance.LevelEnd();
-        }
-    }*/
+            if (other.CompareTag("Coin"))
+            {
+                gameManager.coinsCollected++;
+                Destroy(gameObject);
+            }
+            else if (other.CompareTag("Goal"))
+            {
+                GameManager.instance.LevelEnd();
+            }
+        }*/
+    }
 }
