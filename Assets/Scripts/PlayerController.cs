@@ -11,34 +11,35 @@ using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed;
-    public float jumpForce;
+    public float moveSpeed = 5f;
 
+    public float jumpForce = 200f;
+    
     public Rigidbody rb;
     private float playerScore;
-    public float raycastSize = 0.5f;
-
-    public GameManager gameManager;
 
     public float movementMixNumber;
+
+    public bool canJump;
+    public float DeploymentHeight = 1;
 
     void Awake()
     {
         // get the rigidbody component
         rb = GetComponent<Rigidbody>();
-        movementMixNumber = Random.Range(1, 6);
+        movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
+       // movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
     void Update()
     {
-        //NoMixMove(); //Uncomment/comment when Movement needs to not be mixed around - useful for testing features.
-        //Currently works well 02/01/21
-
-        MixedMove(); //Uncomment/comment when Movement needs to be shuffled - this is how the controls should be for the game
-        //Currently does not work 02/01/21
+        MixedMove();
         
+    }
+    
+    
 
-        void MixedMove()
+    void MixedMove()
         {
 
             Rigidbody rb = GetComponent<Rigidbody>();
@@ -54,8 +55,14 @@ public class PlayerController : MonoBehaviour
                         rb.AddForce(Vector3.forward);
                     if (Input.GetKey(KeyCode.S)) //Down
                         rb.AddForce(Vector3.back);
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        {
+                            rb.AddForce(0, jumpForce, 0);
+                        }
+                    }
                     break;
-                case 2: // Reversed
+                case 2: //Reversed
                     //Rigidbody rb = GetComponent<Rigidbody>();
                     if (Input.GetKey(KeyCode.D)) //Left
                         rb.AddForce(Vector3.left);
@@ -114,6 +121,11 @@ public class PlayerController : MonoBehaviour
 
             rb.velocity = dir;
         }
+        
+        void TryJump()
+        {
+            
+        }
 
 
         /*public void OnTriggerEnter(Collider other)
@@ -130,4 +142,3 @@ public class PlayerController : MonoBehaviour
             }
         }*/
     }
-}
