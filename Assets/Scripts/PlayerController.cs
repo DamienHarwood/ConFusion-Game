@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public bool canJump;
 
-    public event Action playerUse;
+    public event Action PlayerUse;
 
     void Awake()
     {
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     void Use()
     {
         Debug.Log("Use");
-        playerUse?.Invoke();
+        PlayerUse?.Invoke();
     }
 
 
