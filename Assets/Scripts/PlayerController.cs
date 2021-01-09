@@ -25,12 +25,16 @@ public class PlayerController : MonoBehaviour
 
     public bool canJump;
 
+    public event Action playerUse;
+
     void Awake()
     {
         // get the rigidbody component
-        
+
         Rigidbody rb = GetComponent<Rigidbody>();
         movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
+
+        //FOR TESTING
         movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
@@ -43,11 +47,10 @@ public class PlayerController : MonoBehaviour
 
     void MixedMove()
     {
-        
+        //TODO: Find a better way of mixing controls, or at least a more condensed version
         switch (movementMixNumber)
         {
             case 1: // Not Mixed
-
                 if (Input.GetKey(KeyCode.A)) //Left
                     rb.AddForce(Vector3.left);
                 if (Input.GetKey(KeyCode.D)) //Right
@@ -56,8 +59,10 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce(Vector3.forward);
                 if (Input.GetKey(KeyCode.S)) //Down
                     rb.AddForce(Vector3.back);
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space)) //Jump
                     TryJump();
+                if (Input.GetKeyDown(KeyCode.E)) //Use
+                    Use();
                 break;
             case 2: //Reversed
                 //Rigidbody rb = GetComponent<Rigidbody>();
@@ -127,7 +132,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*void NoMixMove() //Unused code Will remove later
+    /*void NoMixMove() //Unused code. Will remove later
     {
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
@@ -145,6 +150,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(0, jumpForce, 0);
         }
+    }
+
+    void Use()
+    {
+        Debug.Log("Use");
+        playerUse?.Invoke();
     }
 
 
