@@ -34,7 +34,7 @@ public class MonolithManager : MonoBehaviour
         sideTarget2 = sideStart2 + new Vector3(0, -3f, 0);
 
         FindObjectOfType<PlayerController>().PlayerUse += MoveMonolith;
-        InvokeRepeating("PlayerInRange", 5, 0.25f);
+        InvokeRepeating("PlayerInRange", 1, 0.25f);
     }
 
     void PlayerInRange()
@@ -42,7 +42,7 @@ public class MonolithManager : MonoBehaviour
         if (!hasBeenActivated)
         {
             //FindObjectOfType<PlayerController>();
-            Debug.Log("Ping");
+            //Debug.Log("Ping");
         }
         
     }
