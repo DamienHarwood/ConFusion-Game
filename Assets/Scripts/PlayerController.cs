@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         
         Rigidbody rb = GetComponent<Rigidbody>();
         movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
-        //movementMixNumber = 1; //Uncomment when testing to stop mixing
+        movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
     void Update()
