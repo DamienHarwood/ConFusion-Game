@@ -21,9 +21,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonolithManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -68,7 +68,7 @@
       <updated>1609415526154</updated>
       <workItem from="1609415534259" duration="3622000" />
       <workItem from="1610251459501" duration="3745000" />
-      <workItem from="1610947192174" duration="1226000" />
+      <workItem from="1610947192174" duration="1824000" />
     </task>
     <servers />
   </component>
