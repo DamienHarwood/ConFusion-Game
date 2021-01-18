@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int coinsCollected = 0;
-    
 
+    public GameObject Player;
+
+    public GameObject Camera;
     // instance
     public static GameManager instance;
 
@@ -22,6 +24,10 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        Instantiate(Player);
+        
+        Instantiate(Camera);
     }
 
     
