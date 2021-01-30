@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float movementMixNumber;
     public float groundDistance = 0.4f;
 
+    public float movement = 1;
     public LayerMask groundMask;
 
     public Transform groundCheck;
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
        // movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
-    void Update()
+    void FixedUpdate()
     {
         canJump = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         MixedMove();
@@ -52,13 +53,13 @@ public class PlayerController : MonoBehaviour
         {
             case 1: // Not Mixed
                 if (Input.GetKey(KeyCode.A)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.D)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.W)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.S)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.Space)) //Jump
                     TryJump();
                 if (Input.GetKeyDown(KeyCode.E)) //Use
@@ -67,62 +68,62 @@ public class PlayerController : MonoBehaviour
             case 2: //Reversed
                 //Rigidbody rb = GetComponent<Rigidbody>();
                 if (Input.GetKey(KeyCode.D)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.A)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.S)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.W)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.Space))
                     TryJump();
                 break;
             case 3:
                 //Rigidbody rb = GetComponent<Rigidbody>();
                 if (Input.GetKey(KeyCode.S)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.Space)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.W)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.A)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.D))
                     TryJump();
                 break;
             case 4:
                 if (Input.GetKey(KeyCode.Space)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.W)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.S)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.D)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.A))
                     TryJump();
                 break;
             case 5:
                 if (Input.GetKey(KeyCode.W)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.A)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.D)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.Space)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.S))
                     TryJump();
                 break;
             case 6:
                 if (Input.GetKey(KeyCode.A)) //Left
-                    rb.AddForce(Vector3.left);
+                    rb.AddForce(Vector3.left * movement);
                 if (Input.GetKey(KeyCode.Space)) //Right
-                    rb.AddForce(Vector3.right);
+                    rb.AddForce(Vector3.right * movement);
                 if (Input.GetKey(KeyCode.S)) //Up
-                    rb.AddForce(Vector3.forward);
+                    rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.W)) //Down
-                    rb.AddForce(Vector3.back);
+                    rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.D))
                     TryJump();
                 break;

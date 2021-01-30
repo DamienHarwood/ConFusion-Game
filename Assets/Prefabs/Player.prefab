@@ -147,6 +147,7 @@ MonoBehaviour:
   jumpForce: 500
   movementMixNumber: 1
   groundDistance: 0.1
+  movement: 15
   groundMask:
     serializedVersion: 2
     m_Bits: 8

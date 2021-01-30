@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject Camera;
     // instance
     public static GameManager instance;
+    
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         
         Instantiate(Camera);
     }
+    
 
     
     public void LevelEnd()
