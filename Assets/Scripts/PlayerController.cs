@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         // get the rigidbody component
 
         Rigidbody rb = GetComponent<Rigidbody>();
-        movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
+        movementMixNumber = Random.Range(1, 7); //chooses which movement scheme to go with for a given level
 
         //FOR TESTING - Disables the mixed controls
         // movementMixNumber = 1; //Uncomment when testing to stop mixing
@@ -134,6 +134,18 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKey(KeyCode.S)) //Up
                     rb.AddForce(Vector3.forward * movement);
                 if (Input.GetKey(KeyCode.W)) //Down
+                    rb.AddForce(Vector3.back * movement);
+                if (Input.GetKeyDown(KeyCode.D))
+                    TryJump();
+                break;
+            case 7:
+                if (Input.GetKey(KeyCode.S)) //Left
+                    rb.AddForce(Vector3.left * movement);
+                if (Input.GetKey(KeyCode.W)) //Right
+                    rb.AddForce(Vector3.right * movement);
+                if (Input.GetKey(KeyCode.A)) //Up
+                    rb.AddForce(Vector3.forward * movement);
+                if (Input.GetKey(KeyCode.Space)) //Down
                     rb.AddForce(Vector3.back * movement);
                 if (Input.GetKeyDown(KeyCode.D))
                     TryJump();
