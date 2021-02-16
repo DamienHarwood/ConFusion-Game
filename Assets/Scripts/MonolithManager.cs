@@ -14,9 +14,9 @@ public class MonolithManager : MonoBehaviour
     public Transform pylonRaiseTarget;
     public Transform pylonLowerTarget1;
     public Transform pylonLowerTarget2;
-    
+
     private bool hasBeenActivated = false;
-    
+
     private Vector3 middleStart;
     private Vector3 middleTarget;
 
@@ -24,24 +24,24 @@ public class MonolithManager : MonoBehaviour
     private Vector3 sideStart2;
     private Vector3 sideTarget1;
     private Vector3 sideTarget2;
-    
+
     public float range = 5f;
 
     public float moveSpeed = 1f;
+
     void Awake()
     {
-        
         FindObjectOfType<PlayerController>().PlayerUse += MoveMonolith;
         InvokeRepeating("PlayerInRange", 1, 0.25f);
     }
 
     private void Update()
     {
-       // if (hasBeenActivated)
+        // if (hasBeenActivated)
         {
-          //  pylonRaise.transform.position = Mathf.Lerp(transform.particleSystem, );
-          //  pylonLower1.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget1.position, moveSpeed);
-          //  pylonLower2.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget2.position, moveSpeed);
+            //  pylonRaise.transform.position = Mathf.Lerp(transform.particleSystem, );
+            //  pylonLower1.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget1.position, moveSpeed);
+            //  pylonLower2.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget2.position, moveSpeed);
         }
     }
 
@@ -52,11 +52,7 @@ public class MonolithManager : MonoBehaviour
             //FindObjectOfType<PlayerController>();
             //Debug.Log("Ping");
         }
-        
     }
-    
-    
-    
 
 
     void MoveMonolith()
@@ -70,6 +66,5 @@ public class MonolithManager : MonoBehaviour
         {
             Debug.Log("Monolith already activated");
         }
-
     }
 }

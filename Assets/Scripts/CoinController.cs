@@ -15,11 +15,11 @@ public class CoinController : MonoBehaviour
     {
         startPos = transform.position;
         targetPos = startPos + new Vector3(0, bobHeight, 0);
-
     }
 
     void Update()
     {
+        //Try Lerp here maybe?? I want a smoother motion for the coin
         transform.position = Vector3.MoveTowards(transform.position, targetPos, bobSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime, Space.World);
 

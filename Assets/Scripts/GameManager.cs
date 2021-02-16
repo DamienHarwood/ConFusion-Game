@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
 
     public GameObject Camera;
-    
+
     public GameObject EndLevelPlatform;
-    
+
     // instance
     public static GameManager instance;
 
@@ -31,12 +31,11 @@ public class GameManager : MonoBehaviour
         }
 
         Instantiate(Player);
-        
+
         Instantiate(Camera);
     }
-    
 
-    
+
     public void LevelEnd()
     {
         if (SceneManager.sceneCountInBuildSettings == SceneManager.GetActiveScene().buildIndex + 1)
@@ -48,13 +47,12 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
     public void WinGame()
     {
-
     }
 
     public void GameOver()
     {
-        
     }
 }

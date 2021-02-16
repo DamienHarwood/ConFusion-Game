@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     public event Action PlayerUse;
 
 
-
     void Awake()
     {
         // get the rigidbody component
@@ -38,7 +37,7 @@ public class PlayerController : MonoBehaviour
         movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
 
         //FOR TESTING - Disables the mixed controls
-       // movementMixNumber = 1; //Uncomment when testing to stop mixing
+        // movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
     void FixedUpdate()
