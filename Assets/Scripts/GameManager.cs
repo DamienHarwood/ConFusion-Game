@@ -10,9 +10,13 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
 
     public GameObject Camera;
+    
+    public GameObject EndLevelPlatform;
+    
     // instance
     public static GameManager instance;
-    
+
+    //NOT IN SCENE YET. STILL HAVING ISSUES WITH INSTANTIATING PLAYER AND CAMERA CORRECTLY
 
     void Awake()
     {

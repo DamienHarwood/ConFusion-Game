@@ -9,8 +9,14 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void Options()
+    {
+        //unused so far, not sure if Ill implement this or not.
+    }
+
     public void QuitGame()
     {
+        //doesnt work in editor, onlt works when the game is built
         Debug.Log("Game Has Quit");
         Application.Quit();
     }

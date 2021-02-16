@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public event Action PlayerUse;
 
+
+
     void Awake()
     {
         // get the rigidbody component
@@ -35,16 +37,26 @@ public class PlayerController : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         movementMixNumber = Random.Range(1, 6); //chooses which movement scheme to go with for a given level
 
-        //FOR TESTING
+        //FOR TESTING - Disables the mixed controls
        // movementMixNumber = 1; //Uncomment when testing to stop mixing
     }
 
     void FixedUpdate()
     {
+        //checks to see if the collider at the players feet is touching the ground
         canJump = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         MixedMove();
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        throw new NotImplementedException();
+        //not used yet, will be used for the end of the level transition and some
+        //other things like monoliths and buttons. not sure if I should be putting this
+        //on the player or in the game manager. For now I'm going to put it on the player
+        //because that makes more sense at this point. maybe I'll change later.
+    }
 
     void MixedMove()
     {
