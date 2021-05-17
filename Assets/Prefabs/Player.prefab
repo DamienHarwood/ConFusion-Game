@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3164685376426344682}
   - component: {fileID: 3164685376426344680}
   - component: {fileID: 3164685376426344681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -147,12 +147,12 @@ MonoBehaviour:
   jumpForce: 500
   movementMixNumber: 1
   groundDistance: 0.1
-  movement: 15
+  movement: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 2711545658121991706}
-  canJump: 0
+  canJump: 1
 --- !u!54 &3164685376426344681
 Rigidbody:
   m_ObjectHideFlags: 0

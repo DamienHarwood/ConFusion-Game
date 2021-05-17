@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEditor;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 
@@ -15,56 +17,75 @@ public class MonolithManager : MonoBehaviour
     public Transform pylonLowerTarget1;
     public Transform pylonLowerTarget2;
 
-    private bool hasBeenActivated = false;
+    public bool hasBeenActivated;
+    public bool canActivate;
+    
+    private float moveSpeed = 1f;
 
-    private Vector3 middleStart;
-    private Vector3 middleTarget;
-
-    private Vector3 sideStart1;
-    private Vector3 sideStart2;
-    private Vector3 sideTarget1;
-    private Vector3 sideTarget2;
-
-    public float range = 5f;
-
-    public float moveSpeed = 1f;
-
-    void Awake()
+    public Rigidbody player;
+    private PlayerController playerController;
+    void Start()
     {
-        FindObjectOfType<PlayerController>().PlayerUse += MoveMonolith;
-        InvokeRepeating("PlayerInRange", 1, 0.25f);
+        hasBeenActivated = false;
+        playerController = FindObjectOfType<PlayerController>();
+        player = GameObject.Find("Player").GetComponent<Rigidbody>();
+        player = playerController.rb;
+        FindObjectOfType<PlayerController>().PlayerUse += TryActivate;
     }
 
     private void Update()
     {
-        // if (hasBeenActivated)
+        
+    }
+
+    IEnumerator MovePylons()
+    {
+        float startTime = Time.time;
+        while(Time.time < startTime + moveSpeed)
         {
-            //  pylonRaise.transform.position = Mathf.Lerp(transform.particleSystem, );
-            //  pylonLower1.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget1.position, moveSpeed);
-            //  pylonLower2.transform.position = Vector3.Lerp(transform.position, pylonLowerTarget2.position, moveSpeed);
+            
+            pylonRaise.transform.position = Vector3.Lerp(pylonRaise.position, pylonRaiseTarget.position, (Time.time - startTime)/moveSpeed);
+            pylonLower1.transform.position = Vector3.Lerp(pylonLower1.position, pylonLowerTarget1.position, (Time.time - startTime)/moveSpeed);
+            pylonLower2.transform.position = Vector3.Lerp(pylonLower2.position, pylonLowerTarget2.position, (Time.time - startTime)/moveSpeed);
+            yield return null;
+        }
+        pylonRaise.transform.position = pylonRaiseTarget.position;
+        pylonLower1.transform.position = pylonLowerTarget1.position;
+        pylonLower2.transform.position = pylonLowerTarget2.position;
+    }
+    void Activate()
+    {
+        Debug.Log("Activated");
+        StartCoroutine("MovePylons");
+        hasBeenActivated = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canActivate = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canActivate = false;
         }
     }
 
-    void PlayerInRange()
-    {
-        if (!hasBeenActivated)
-        {
-            //FindObjectOfType<PlayerController>();
-            //Debug.Log("Ping");
-        }
-    }
 
-
-    void MoveMonolith()
+    void TryActivate()
     {
-        if (!hasBeenActivated)
+        if (canActivate && !hasBeenActivated)
         {
-            Debug.Log("Monolith has been activated");
-            hasBeenActivated = true;
+            Activate();
         }
         else
         {
-            Debug.Log("Monolith already activated");
+            Debug.Log("Cannot Activate");
         }
     }
+    
 }
