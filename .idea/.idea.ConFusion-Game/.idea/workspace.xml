@@ -2,150 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43174bec-1e03-4d76-a54f-155ea7dbcf89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_metallic_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_metallic_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Brushed Aluminum/metal_0014_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_basecolor_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_basecolor_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_height_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_height_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Plaster/concrete_0012_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_displacement_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_displacement_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Horizontal/concrete_0008_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_displacement_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_displacement_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Concrete Slab Vertical/concrete_0009_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_height_2k.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_height_2k.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_normal_2k.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_normal_2k.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_subsurface_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Ice/ground_0031_subsurface_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_emissive_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_emissive_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_height_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_height_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Lava/ground_0027_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Marble/marble_0008_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Paper/paper_0004_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_base_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_base_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Plain Concrete/concrete_0010_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_height_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_height_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Raw Concrete/concrete_0017_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_basecolor_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_basecolor_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_height_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_height_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_normal_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_normal_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Sandy Ground/ground_0024_roughness_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_ao_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_ao_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_color_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_color_2k.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_height_2k.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_height_2k.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_normal_2k.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_normal_2k.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_roughness_2k.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/White Bricks/bricks_0019_roughness_2k.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConFusion-Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConFusion-Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConFusion-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConFusion-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Platform.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Platform.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Things.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Things.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monolith.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monolith.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GroundFloor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GroundFloor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platform.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonolithManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonolithManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,8 +30,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonolithManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DoorManager.cs" />
       </list>
     </option>
   </component>
@@ -221,7 +84,7 @@
       <workItem from="1613486065817" duration="1529000" />
       <workItem from="1615781687844" duration="19000" />
       <workItem from="1621044854248" duration="7456000" />
-      <workItem from="1621225344129" duration="2895000" />
+      <workItem from="1621225344129" duration="5154000" />
     </task>
     <servers />
   </component>

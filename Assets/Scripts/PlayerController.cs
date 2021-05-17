@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
 
     void Use()
     {
-        Debug.Log("Use");
+        //Debug.Log("Use");
         PlayerUse?.Invoke();
     }
 
