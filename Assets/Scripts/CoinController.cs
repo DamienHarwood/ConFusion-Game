@@ -7,6 +7,7 @@ public class CoinController : MonoBehaviour
     public float bobSpeed;
     public float rotateSpeed;
     public float bobHeight;
+    private float bobMargin = 0.01f;
 
     private Vector3 startPos;
     private Vector3 targetPos;
@@ -19,7 +20,6 @@ public class CoinController : MonoBehaviour
 
     void Update()
     {
-        //Try Lerp here maybe?? I want a smoother motion for the coin
         transform.position = Vector3.MoveTowards(transform.position, targetPos, bobSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime, Space.World);
 
@@ -29,6 +29,23 @@ public class CoinController : MonoBehaviour
                 targetPos = startPos + new Vector3(0, bobHeight, 0);
             else if (targetPos == startPos + new Vector3(0, bobHeight, 0))
                 targetPos = startPos;
+        }
+    }
+
+    void Unused()
+    {
+        transform.position = Vector3.Slerp(transform.position, targetPos, bobSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime, Space.World);
+        if (transform.position.y > targetPos.y - bobMargin)
+        {
+            if (targetPos == startPos)
+            {
+                targetPos = startPos + new Vector3(0, bobHeight, 0);
+            }
+            else if (targetPos == startPos + new Vector3(0, bobHeight, 0))
+            {
+                targetPos = startPos;
+            }
         }
     }
 }

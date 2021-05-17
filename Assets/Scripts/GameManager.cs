@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // instance
     public static GameManager instance;
 
-    //NOT IN SCENE YET. STILL HAVING ISSUES WITH INSTANTIATING PLAYER AND CAMERA CORRECTLY
+    //Objects are still having issues finding player after instantiation
 
     void Awake()
     {

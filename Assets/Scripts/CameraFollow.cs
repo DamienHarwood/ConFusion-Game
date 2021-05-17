@@ -10,6 +10,13 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public Vector3 offset;
     public float smoothSpeed = 0.03f;
+    public GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindObjectOfType<PlayerController>().gameObject;
+        target = player.transform;
+    }
 
     private void FixedUpdate()
     {
